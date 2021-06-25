@@ -1,6 +1,6 @@
 import React from 'react';
 
-function login() {
+function Login() {
     return <div className="row d-flex justify-content-center pt-2">
         <LHS />
         <RHS />
@@ -47,4 +47,4 @@ function RHS() {
     </div>;
 }
 
-export default login;
+export default Login;
