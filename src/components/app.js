@@ -1,7 +1,35 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
+import Login from './login';
+
 
 function App() {
-    return <h1>Hello World</h1>;
+    return (
+        <Router basename='/login'>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/login">Login</Link>
+                        </li>
+                    </ul>
+                </nav>
+
+                {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+                <Switch>
+                    <Route path="/login" component={Login}>
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
