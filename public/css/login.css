@@ -1,0 +1,115 @@
+.welcome-text-container {
+    border-radius: 5vw 0 0 5vw;
+    height: 95vh;
+    background-color: rgb(65, 0, 48);
+}
+
+.input-text-container {
+    border-radius: 0 5vw 5vw 0;
+    height: 95vh;
+    color: white;
+    background-color: rgb(65, 0, 48);
+
+}
+
+.welcome-texts {
+    z-index: 10;
+}
+
+.neon {
+    color: transparent;
+    text-align: center;
+    padding: 4%;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.neon:nth-of-type(1) {
+    font: 2vw Warnes;
+    text-shadow: 0 0 0.1vw #f3bcbc, 0 0 0.5vw #f12f21, 0 0 1.5vw #f00;
+}
+.neon:nth-of-type(2) {
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.1vw #f7ceea, 0 0 0.5vw #e0018d, 0 0 0.5vw #e0018d, 0 0 0.5vw #e0018d, 0 0 0.5vw #e0018d, 0 0 0.5vw #e0018d, 0 0 0.5vw #e0018d, 0 0 0.5vw #e0018d, 0 0 5vw #000;
+    letter-spacing: 2vw;
+}
+
+.neon:nth-of-type(2) span {
+    animation: Flicker 0.23s infinite;
+}
+
+.neon:nth-of-type(3) {
+    font: 2vw 'Neon Lights', 'Hello Denver';
+    text-shadow: 0 0 0.1vw #95b4da, 0 0 1vw #008eff;
+}
+
+.lines-box {
+    position: absolute;
+    height: 50vh;
+    width: 30vw;
+    z-index: 0;
+}
+
+.line {
+    height: 5vh;
+    margin-top: 1vh;
+    border-radius: 1.5vw;
+    border: 0.3vw;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.lines-box .line:nth-of-type(1) {
+    box-shadow: 0 0 1vw 1.2vw #612828;
+    background: #612828;
+    border-color: #612828;
+}
+
+.line:nth-of-type(2) {
+    box-shadow: 0 0 1vw 1.2vw #5f551d;
+    background: #5f551d;
+    border-color: #5f551d;
+}
+
+.line:nth-of-type(3) {
+    box-shadow: 0 0 1vw 1.2vw #304e22;
+    background: #304e22;
+    border-color: #304e22;
+}
+
+.line:nth-of-type(4) {
+    box-shadow: 0 0 1vw 1.2vw #224c53;
+    background: #224c53;
+    border-color: #224c53;
+}
+
+.line:nth-of-type(5) {
+    box-shadow: 0 0 1vw 1.2vw #242e50;
+    background: #242e50;
+    border-color: #242e50;
+}
+
+.line:nth-of-type(6) {
+    box-shadow: 0 0 1vw 1.2vw #50274a;
+    background: #50274a;
+    border-color: #50274a;
+}
+
+.line:nth-of-type(7) {
+    box-shadow: 0 0 1vw 1.2vw #612828;
+    background: #612828;
+    border-color: #612828;
+}
+
+.link-text {
+    text-decoration: none;
+    color: teal;
+    font-weight: 500;
+}
+
+.glow-text {
+    text-shadow: 0 0 0.1vw #fff, 0 0 0.2vw #fff, 0 0 0.3vw #fff;
+}
