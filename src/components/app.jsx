@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
+    // Link,
 } from "react-router-dom";
 
 import Login from './login';
@@ -11,6 +11,7 @@ import SignUp from './signup';
 import Quest from './questionnaire';
 import ChatRoomNames from './chatRoomNames';
 import ChatRoom from './chat_room';
+import ViewAllBlogs from './view_all_blogs';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/quest" component={Quest}></Route>
                     <Route path="/chat-room-names" component={ChatRoomNames}></Route>
                     <Route path="/chat-room" component={ChatRoom}></Route>
+                    <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
                     <Route path="/" component={Login}></Route>
                 </Switch>
             </div>
