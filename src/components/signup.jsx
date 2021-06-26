@@ -4,6 +4,8 @@ import { useQuery, gql, useMutation } from "@apollo/client";
 export default function SignUp() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [userName, setUserName] = useState('');
+    // TODO: UserName
     const MUTATION = gql`
       mutation Register($email: String!, $password: String!){
         register(email: $email, password: $password){
@@ -21,22 +23,17 @@ export default function SignUp() {
                     <h2 className="neon">Velv<span>e</span>t</h2>
                     <h2 className="neon">Cafe</h2>
                 </div>
-                <div className="lines-box align-self-center d-flex flex-column justify-content-around">
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                    <div className="line"></div>
-                </div>
             </div>
             <div className="col-4 input-text-container d-flex justify-content-center">
                 <div className="align-self-center d-flex flex-column justify-content-evenly">
-                    <h3 className="glow-text" Style="color: teal;">Account Login</h3>
+                    <h3 className="glow-text" Style="color: teal;">Register Account</h3>
                     <form onSubmit={(e) => {
                         e.preventDefault();
                         register({
                             variables: {
                                 email: email,
                                 password: password
+                                // TODO: UserName
                             }
                         });
                         console.log(data);
@@ -48,16 +45,17 @@ export default function SignUp() {
                             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div className="mb-3">
+                            <label for="userName" className="form-label">User Name</label>
+                            <input type="name" className="form-control" id="userName" aria-describedby="userNameHelp" onChange={(e) => setUserName(e.target.value)}></input>
+                            <div id="userNameHelp" className="form-text">Will be displayed to other users in our Cafe</div>
+                        </div>
+                        <div className="mb-3">
                             <label for="exampleInputPassword1" className="form-label">Password</label>
                             <input type="password" className="form-control" id="password" onChange={(e) => setPassword(e.target.value)}></input>
-                        </div>
-                        <div className="form-text">
-                            Don't Have an account. <a className="link-text" href="index.html">Sign Up</a>
                         </div>
                         <br />
                         <button type="submit" className="btn btn-primary" Style="background-color: teal;">SignUp</button>
                     </form>
-                    <button type="button" className="btn" onClick={SignUp}> Button </button>
                 </div>
             </div>
         </div>

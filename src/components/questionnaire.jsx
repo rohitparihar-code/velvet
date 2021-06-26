@@ -43,7 +43,7 @@ var review = [
     ],
 ];
 
-var answers = [1, 1];
+var answers = [1, 1, 3];
 
 class Questionnaire extends React.Component {
     constructor(props) {
@@ -63,13 +63,14 @@ class Questionnaire extends React.Component {
     }
   
     handleSubmit(event) {
+        event.preventDefault();
         var indexOfReview = options[this.index].indexOf(this.value);
         this.setState(() => this.review = review[this.index][indexOfReview]);
 
         if( indexOfReview === answers[this.index] ) {
-            this.isDisbaled = '';
+            document.getElementById("nxtQ").style.display = 'block';
         } else {
-            this.isDisbaled = 'true';
+            document.getElementById("nxtQ").style.display = 'none'; 
         }
 
         this.setState(() => this.isDisbaled);
@@ -78,6 +79,8 @@ class Questionnaire extends React.Component {
     }
 
     nextQuest(event) {
+
+        document.getElementById("nxtQ").style.display = "none";
 
         if( this.index === questions.length -1) {
             // all the questions have been completed
@@ -97,25 +100,32 @@ class Questionnaire extends React.Component {
 
     render() {
         return (
-        <div className="row d-flex justify-content-evenly mt-5 pt-5">
-            <div className="col-1 align-self-center my-box">
-                Question {this.index+1}
-            </div>
-        <div className="col-4 align-self-center align-items-center my-box">
-            {questions[this.index]}
+        <div className="row d-flex justify-content-around mt-5 pt-5">
+            {/* <div className="col-1 align-self-center my-box">
+                <h1>Q{this.index+1}.</h1>
+            </div> */}
+        <div className="col-6 align-self-center align-items-center my-box">
+            <h1>{questions[this.index]}</h1>
             <hr />
-            <form onSubmit={this.handleSubmit}>
-            <input type="radio" name="options" onClick={this.handleChange} value={options[this.index][0]}/> {options[this.index][0]} <hr />
-            <input type="radio" name="options" onClick={this.handleChange} value={options[this.index][1]}/> {options[this.index][1]} <hr />
-            <input type="radio" name="options" onClick={this.handleChange} value={options[this.index][2]}/> {options[this.index][2]} <hr />
-            <input type="radio" name="options" onClick={this.handleChange} value={options[this.index][3]}/> {options[this.index][3]} <hr />
+            <form onSubmit={this.handleSubmit} >
+            <input id="opt1" className="options-text" type="radio" name="options" onClick={this.handleChange} value={options[this.index][0]}/>  
+            <label for="opt1"><h4>&nbsp;&nbsp;{options[this.index][0]}</h4></label><hr />
+            
+            <input id="opt2" className="options-text" type="radio" name="options" onClick={this.handleChange} value={options[this.index][1]}/> 
+            <label for="opt2">  <h4>&nbsp;&nbsp;{options[this.index][1]}</h4></label><hr />
+            
+            <input id="opt3" className="options-text" type="radio" name="options" onClick={this.handleChange} value={options[this.index][2]}/>
+            <label for="opt3">  <h4>&nbsp;&nbsp;{options[this.index][2]}</h4></label><hr />
+            
+            <input id="opt4" className="options-text" type="radio" name="options" onClick={this.handleChange} value={options[this.index][3]}/>
+            <label for="opt4">  <h4>&nbsp;&nbsp;{options[this.index][3]}</h4></label><hr />
+            
             <input type="submit" value="Submit" className="btn btn-primary"/>
             </form>
         </div>
-        <div className="col-4 align-self-center my-box">
-            {this.review}
-            <hr />
-            <button disabled={this.isDisbaled} className="btn btn-info" onClick={this.nextQuest}>Next Question</button>
+        <div className="col-4 align-self-center my-box" Style="margin-right: 10vw">
+            <p className="rainbow-text">{this.review}</p>
+            <button Style="display: none" id="nxtQ" className="btn btn-info" onClick={this.nextQuest}>Next Question</button>
         </div>
     </div>
       );
