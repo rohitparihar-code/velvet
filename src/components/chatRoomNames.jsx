@@ -1,12 +1,12 @@
 import React from 'react';
 
 var room_description = [
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy',
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy',
-    'lisuc iasu gadd',
-    'asli uhiasduhlasd ',
-    'a souidfhoasdh',
-    'aidsf iaudsf'
+    'Interact with allies from all around the world',
+    'Safe space for Queer individuals',
+    'Don\'t enter if you are not an 18+',
+    'To discuss LGBTQ+ causes around the world',
+    'Join this room if you are facing any issues',
+    'Discuss your Hobbies'
 ]
 
 var room_names = [
@@ -18,14 +18,14 @@ var room_names = [
     'Arts'
 ];
 
-const defaultDesc = 'WELCOME\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy';
+const defaultDesc = 'Welcome to our Velvet fiesta. Connect with people and share your interests by joining the chat room of your choice';
 
 class ChatRoomNames extends React.Component {
 
     constructor(props) {
         super(props);
         this.selected_room = 0;
-        this.desc = 'WELCOME\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy';
+        this.desc = defaultDesc;
         this.index = 0;
         this.showDesc = false;
 
