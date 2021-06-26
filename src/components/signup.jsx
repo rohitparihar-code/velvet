@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { useQuery, gql, useMutation } from "@apollo/client";
 
 export default function SignUp() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [userName, setUserName] = useState('');
+    const [redirect, setRedirect] = useState(false);
     // TODO: UserName
     const MUTATION = gql`
       mutation Register($email: String!, $password: String!){
@@ -15,6 +17,7 @@ export default function SignUp() {
       }
     `;
     const [register, { data, error }] = useMutation(MUTATION);
+    if(!redirect)
     return (
         <div className="row d-flex justify-content-center pt-2">
             <div className="col-4 welcome-text-container d-flex justify-content-center">
@@ -36,8 +39,7 @@ export default function SignUp() {
                                 // TODO: UserName
                             }
                         });
-                        console.log(data);
-                        console.log(error);
+                        setRedirect(true);
                     }}>
                         <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Email address</label>
@@ -59,6 +61,7 @@ export default function SignUp() {
                 </div>
             </div>
         </div>
-
     );
+    else
+     return <Redirect to='/quest'></Redirect>;
 }

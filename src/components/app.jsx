@@ -23,7 +23,7 @@ function App() {
                     <Route path="/signup" component={SignUp}></Route>
                     <Route path="/quest" component={Quest}></Route>
                     <Route path="/chat-room-names" component={ChatRoomNames}></Route>
-                    <Route path="/chat-room" component={ChatRoom}></Route>
+                    <Route path="/chat-room" render={(props) => <ChatRoom {...props}/>}></Route>
                     <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
                     <Route path="/" component={Login}></Route>
                 </Switch>
