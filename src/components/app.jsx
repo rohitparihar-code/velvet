@@ -12,6 +12,7 @@ import Quest from "./questionnaire";
 import ChatRoomNames from "./chatRoomNames";
 import ChatRoom from "./chat_room";
 import ViewAllBlogs from "./view_all_blogs";
+import mainPage from "./main";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           <Route path="/chat-room-names" component={ChatRoomNames}></Route>
           <Route path="/chat-room" component={ChatRoom}></Route>
           <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
-          <Route path="/" component={Login}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/" component={mainPage}></Route>
         </Switch>
       </div>
     </Router>

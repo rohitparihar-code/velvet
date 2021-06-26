@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom'; 
+
 var questions = [
     'Is Homo Sexuality a mental illness?',
     // 'Which of the following is most accurate :-',
@@ -112,6 +114,14 @@ class Questionnaire extends React.Component {
             document.getElementById("nxtQ").style.display = 'none'; 
         }
 
+        if( this.index === questions.length -1) {
+            // TODO: Move to selection page
+            document.getElementById("nxtQ").style.display = 'none';
+            document.getElementById("final-btn1").style.display = 'block';
+            document.getElementById("final-btn2").style.display = 'block';
+            return ;
+        }
+
         this.setState(() => this.isDisbaled);
 
         event.preventDefault();
@@ -120,11 +130,6 @@ class Questionnaire extends React.Component {
     nextQuest(event) {
 
         document.getElementById("nxtQ").style.display = "none";
-
-        if( this.index === questions.length -1) {
-            // all the questions have been completed
-            return ;
-        }
 
         var radios = document.getElementsByName('options');
         for(var i=0; i<radios.length; i++) {
@@ -165,6 +170,14 @@ class Questionnaire extends React.Component {
         <div className="col-4 align-self-center my-box" Style="margin-right: 10vw">
             <p className="rainbow-text">{this.review}</p>
             <button Style="display: none" id="nxtQ" className="btn btn-info" onClick={this.nextQuest}>Next Question</button>
+            <div className="row">
+                <button Style="display: none" id="final-btn1" className="btn btn-info col-4">
+                   <Link to="/chat-room-names">Chat with People of Your Interests</Link>
+                </button>
+                <button Style="display: none" id="final-btn2" className="btn btn-info col-4">
+                   <Link to="/view-all-blogs">Read Stories from Inspiring people</Link>
+                </button>
+            </div>
         </div>
     </div>
       );
