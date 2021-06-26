@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function mainPage() {
     return (<div>
@@ -71,7 +72,7 @@ export default function mainPage() {
         <span class="u-text-custom-color-9">Empowering non-binary folx!</span>
         <br />Our entry to the MLH Hackathon "Pride Hacks" 2021
       </h6>
-      <a href="Log in page"
+      <Link to="/login"
         class="u-border-2 u-border-custom-color-6 u-btn u-btn-round u-button-style u-hover-custom-color-6 u-none u-radius-20 u-text-custom-color-6 u-text-hover-white u-btn-1">Continue
         to App<span class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 492.004 492.004" x="0px" y="0px"
             Style="width: 1em; height: 1em;">
@@ -83,7 +84,7 @@ export default function mainPage() {
               </g>
             </g>
           </svg></span>
-      </a>
+      </Link>
       <a href="landing-page.html#sec-c70c" data-page-id="455759"
         class="u-border-2 u-border-custom-color-6 u-btn u-btn-round u-button-style u-hover-custom-color-6 u-none u-radius-20 u-text-custom-color-6 u-text-hover-white u-btn-2">
         Learn More&nbsp;&nbsp;<span class="u-icon u-icon-2"><svg class="u-svg-content" viewBox="0 0 451.847 451.847"
