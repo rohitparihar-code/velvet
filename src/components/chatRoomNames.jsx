@@ -18,24 +18,28 @@ var room_names = [
     'Arts'
 ];
 
-class ChatRooms extends React.Component {
+const defaultDesc = 'WELCOME\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy';
+
+class ChatRoomNames extends React.Component {
 
     constructor(props) {
         super(props);
         this.selected_room = 0;
         this.desc = 'WELCOME\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy';
         this.index = 0;
+        this.showDesc = false;
 
-        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleClick = this.handleClick.bind(this);
+        this.onMouseEnter = this.onMouseEnter.bind(this);
+        this.onMouseLeave = this.onMouseLeave.bind(this);
     }
 
-
-    handleChange(event) {
-        // alert(room_description[event.target.value]);
-
+    onMouseEnter(event) {
         this.setState(() => this.desc = room_description[event.target.value]);
+    }
+
+    onMouseLeave(event) {
+        this.setState(() => this.desc = defaultDesc);
     }
 
     handleSubmit(event) {
@@ -43,17 +47,14 @@ class ChatRooms extends React.Component {
         this.setState();
     }
 
-    // handleClick(event) {
-    //     var 
-    // }
-
     render() {
         return (
             <div className=" container-fluid">
                 <div className="row pt-5">
                     <div className="d-flex flex-column col-5 my-box chatRoom-names justify-content-around">
-                        {room_names.map((name, i) => (<div><button className="btn my-btn" onClick={this.handleChange} value={i}>{room_names[i]}</button> </div>))}
-                        <button className="btn submit-btn" onClick={this.handleSubmit}>Submit</button>
+                        {
+                        room_names.map(
+                            (name, i) => (<div><button className="btn my-btn" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={this.handleSubmit} value={i}>{room_names[i]}</button> </div>))}
                     </div>
                     <div className="d-flex col-5 chatRoom-desc my-box justify-content-center" id = 'description'>
                         <p className="my-desc rainbow-text align-self-center">{this.desc}</p>
@@ -64,4 +65,4 @@ class ChatRooms extends React.Component {
     }
 }
 
-export default ChatRooms;
+export default ChatRoomNames;
