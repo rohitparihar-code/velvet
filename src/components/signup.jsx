@@ -16,7 +16,7 @@ export default function SignUp() {
     `;
     const [register, { data, error }] = useMutation(MUTATION);
     return (
-        <div className="row d-flex justify-content-center pt-2" Style="background-color: rgb(65, 0, 48)">
+        <div className="row d-flex justify-content-center pt-2" Style="background-color: rgb(32, 0, 69)">
             <div className="col-4 welcome-text-container d-flex justify-content-center">
             <img class="u-image u-image-default u-image-1" src="images/Welcometo3.svg" 
                 alt="..."  Style="height: 90vh; width: 50vh; object-fit: fill"/>
