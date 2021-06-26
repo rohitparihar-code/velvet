@@ -9,6 +9,7 @@ import {
 import Login from './login';
 import SignUp from './signup';
 import Quest from './questionnaire';
+import ChatRooms from './chatRooms';
 
 function App() {
     return (
@@ -18,7 +19,8 @@ function App() {
             renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/signup" component={SignUp}></Route>
-                    <Route path="/quest" component={Quest}></Route> 
+                    <Route path="/quest" component={Quest}></Route>
+                    <Route path="/chat-rooms" component={ChatRooms}></Route>
                     <Route path="/" component={Login}></Route>
                 </Switch>
             </div>

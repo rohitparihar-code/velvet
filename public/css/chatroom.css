@@ -1,0 +1,41 @@
+/* .chatRoom-names {
+    background-color: white;
+}
+
+.chatRoom-desc {
+    background-color: violet;
+} */
+
+.my-btn {
+    color: white;
+    margin: 1vw;
+    border-radius: 2vw;
+    border-width: 1px;
+    border-color: white;
+    width: 25vw;
+    height: 7.5vh;
+}
+
+.my-btn:hover {
+    overflow: hidden;
+    font-size: 25px;
+    background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+}
+
+.submit-btn {
+    color: white;
+    margin: 1vw;
+    border-radius: 2vw;
+    border-width: 1px;
+    border-color: white;
+    width: 25vw;
+    height: 7.5vh;
+    background-color: rgb(36, 146, 60);
+}
+
+.submit-btn:hover {
+    font-size: 20px;
+    overflow: hidden;
+    color: white;
+    background-color: rgb(117, 49, 131);
+}
