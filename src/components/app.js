@@ -5,18 +5,16 @@ import {
     Route,
     Link
 } from "react-router-dom";
-
-import Login from './login';
-
+import SignUp from './signup';
 
 function App() {
     return (
-        <Router basename='/login'>
+        <Router basename='/signup'>
             <div>
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/login">Login</Link>
+                            <Link to="/signup">Login</Link>
                         </li>
                     </ul>
                 </nav>
@@ -24,7 +22,7 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/login" component={Login}>
+                    <Route path="/signup" component={SignUp}>
                     </Route>
                 </Switch>
             </div>
