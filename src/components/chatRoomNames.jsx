@@ -41,7 +41,9 @@ class ChatRoomNames extends React.Component {
             join: false,
             room: '',
             user_id: '',
-            redirect: false
+            redirect: false,
+            name: '',
+            username: ''
         }
         this.onClick = this.onClick.bind(this);
         this.onMouseEnter = this.onMouseEnter.bind(this);
@@ -51,8 +53,11 @@ class ChatRoomNames extends React.Component {
 
     componentDidMount(props) {
         getUserId().then((user) => {
-            if(user.id)
-            this.setState({ user_id: user.id });
+            if(user.uid) {
+                this.setState({ user_id: user.uid });
+                this.setState({ username: user.username});
+                this.setState({ name: user.name });
+            }
             else
             this.setState({redirect: true});
         });
@@ -70,7 +75,9 @@ class ChatRoomNames extends React.Component {
         let room_id = `members/${room_names[event.target.value]}`;
         let memberRef = db.ref(room_id).push();
         await memberRef.set({
-            uid: this.state.user_id
+            uid: this.state.user_id,
+            username: this.state.username,
+            name: this.state.name
         });
         this.setState({room: room_names[event.target.value]});
         this.setState({memberId: memberRef.key});

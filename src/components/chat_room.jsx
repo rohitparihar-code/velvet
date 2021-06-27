@@ -7,6 +7,7 @@ import { auth, db } from '../config/firebase';
 import { useQuery, gql } from '@apollo/client';
 import axios from 'axios';
 import Login from "./login";
+import timeConverter from '../utility/date';
 
 const query = gql`
    {
@@ -169,6 +170,7 @@ class ChatRoom extends React.Component {
       redirect: false,
       chats: [],
       members: [],
+      username: '',
       error: '',
       message: '',
       writeError: '',
@@ -182,9 +184,11 @@ class ChatRoom extends React.Component {
     let room = this.props.location.state.room;
     console.log(this.props);
     getUserId().then((user) => {
-      this.setState({ user_id: user.id });
+      this.setState({redirect: false});
+      this.setState({ user_id: user.uid });
+      this.setState({ username: user.username });
       console.log(user);
-      if (user.id) {
+      if (user.uid) {
         try {
           let chatId = `chats/${room}`;
           db.ref(chatId).on("value", snapshot => {
@@ -201,11 +205,13 @@ class ChatRoom extends React.Component {
               members.push(snap.val());
             });
             this.setState({ members });
+            console.log(members);
           });
         } catch (error) {
           this.setState({ error: error.message });
         }
       } else {
+        console.log(user);
         this.setState({ redirect: true });
       }
     });
@@ -222,8 +228,9 @@ class ChatRoom extends React.Component {
     if (e.key === 'Enter') {
       try {
         await db.ref(`chats/${this.props.location.state.room}`).push({
+          name: this.state.username,
           content: this.state.message,
-          timestamp: Date.now(),
+          timeRecorded: timeConverter(new Date()),
           uid: this.state.user_id
         });
         this.setState({ message: '' });
@@ -237,7 +244,9 @@ class ChatRoom extends React.Component {
 
   render() {
     const { redirect, chats, user_id, takeBack, members } = this.state;
-    if (redirect || takeBack)
+    if (redirect)
+      return <Redirect to="/login" />;
+    else if(takeBack)
       return <Redirect to="/chat-room-names" />;
     else
       return (<><div>
@@ -270,8 +279,8 @@ class ChatRoom extends React.Component {
                                     />
                                     <div className="status busy"></div>
                                   </div>
-                                  <div className="name">{member.uid}</div>
-                                  <div className="mood">User mood</div>
+                                  <div className="name">{member.username}</div>
+                                  <div className="mood">{member.name}</div>
                                 </div>
                               </tr>
                             )
@@ -330,11 +339,11 @@ class ChatRoom extends React.Component {
                                   />
                                   <div className="status offline"></div>
                                 </div>
-                                <div className="name">Alexander Herthic</div>
+                                <div className="name">{chat.name}</div>
                                 <div className="text">
                                   {chat.content}
                                 </div>
-                                <div className="time">{chat.timestamp}</div>
+                                <div className="time">{chat.timeRecorded}</div>
                               </div>
                             </tr>
                             )
