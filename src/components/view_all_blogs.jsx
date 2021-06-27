@@ -22,9 +22,7 @@ export default class ViewAllBlogs extends React.Component {
             <button
               className="btn btn-outline-warning"
               data-bs-toggle="modal"
-              data-bs-target="#writeArticleModal"
-            >
-              {" "}
+              data-bs-target="#writeArticleModal">
               Start
             </button>
           </div>
@@ -33,7 +31,7 @@ export default class ViewAllBlogs extends React.Component {
           <h2>Read Stories from Peoples who have overcome fear of hiding</h2>
         </div>
         <div className="blog-content m-5">
-          <Card style={{ width: "60vw", height: "35vh" }}>
+          <Card style={{ width: "60vw", height: "37vh" }}>
             <Card.Body>
               <div className="row justify-content-between">
                 <div className="col-9">
@@ -158,14 +156,22 @@ export default class ViewAllBlogs extends React.Component {
               </div>
               <div class="modal-body">
                 <form action="post">
-                  <label htmlFor="title"> Title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  <label htmlFor="title">
+                    {" "}
+                    Title
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </label>
                   <input Style="width: 77%" type="text" id="title" />
                   <hr />
                   <label htmlFor="img-url"> Image Url &nbsp;&nbsp;</label>
-                  <input Style="width: 77%" type="url" id="img-url"/>
+                  <input Style="width: 77%" type="url" id="img-url" />
                   <hr />
-                  <textarea name="blog-content" id="blog-content" cols="61" rows="10"></textarea>
-                  
+                  <textarea
+                    name="blog-content"
+                    id="blog-content"
+                    cols="61"
+                    rows="10"
+                  ></textarea>
                 </form>
               </div>
               <div class="modal-footer">
