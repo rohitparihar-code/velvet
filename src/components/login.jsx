@@ -19,13 +19,10 @@ export default function Login() {
     const [login, { data, error }] = useMutation(MUTATION);
 
     return (
-        <div className="row d-flex justify-content-center pt-2">
+        <div className="row d-flex justify-content-center pt-2" Style="background-color: rgb(32, 0, 69)">
             <div className="col-4 welcome-text-container d-flex justify-content-center">
-                <div className="align-self-center welcome-texts">
-                    <h2 className="neon">Welcome To</h2>
-                    <h2 className="neon">Velv<span>e</span>t</h2>
-                    <h2 className="neon">Cafe</h2>
-                </div>
+                <img class="u-image u-image-default u-image-1" src="images/Welcometo3.svg" 
+                alt="..."  Style="height: 90vh; width: 50vh; object-fit: fill"/>
             </div>
             <div className="col-4 input-text-container d-flex justify-content-center">
                 <div className="align-self-center d-flex flex-column justify-content-evenly">

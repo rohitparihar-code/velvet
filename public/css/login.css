@@ -1,14 +1,14 @@
 .welcome-text-container {
     border-radius: 5vw 0 0 5vw;
     height: 95vh;
-    background-color: rgb(65, 0, 48);
+    background-color: rgb(32, 0, 69);
 }
 
 .input-text-container {
     border-radius: 0 5vw 5vw 0;
     height: 95vh;
     color: white;
-    background-color: rgb(65, 0, 48);
+    background-color: rgb(32, 0, 69);
 
 }
 

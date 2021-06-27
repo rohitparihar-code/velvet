@@ -1,0 +1,10 @@
+.view-blogs-landing-div {
+    height: 75vh;
+    width: 100%;
+    background-color: teal;
+    /* background: linear-gradient(to top left, violet 20%, blue 40%, green 60%, yellow 80%, red 100%); */
+}
+
+.blog-content {
+    color: black;
+}
