@@ -6,16 +6,16 @@ import axios from 'axios';
 var room_description = [
     'Interact with allies from all around the world',
     'Safe space for Queer individuals',
-    'Don\'t enter if you are not an 18+',
-    'To discuss LGBTQ+ causes around the world',
-    'Join this room if you are facing any issues',
-    'Discuss your Hobbies'
+    'Not Safe For Work (For 18+ only). To gain knowledge from community',
+    'To discuss LGBTQ+ causes around the world and be a part of protests or movements',
+    'Want some help? Get support/guidance from our friends around the world ',
+    'Nurture your interests'
 ]
 
 var room_names = [
     'Global',
     'Queer',
-    'NFSW',
+    'NSFW',
     'Politics',
     'Help/Suggesstions',
     'Arts'

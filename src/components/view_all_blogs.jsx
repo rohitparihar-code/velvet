@@ -47,7 +47,7 @@ export default class ViewAllBlogs extends React.Component {
                   <div className="col-9">
                     <Card.Text>Author</Card.Text>
                     <Card.Title style={{ height: "4vh", overflow: "hidden", color: "#37d1d1"}}>
-                      Some very large Blog title
+                    What the Struggle for Gay Rights Teaches Us about Bridging Differences
                   </Card.Title>
                     <Card.Text style={{ height: "10vh", overflow: "hidden" }}>
                       Lorem Ipsum is simply dummy text of the printing and
@@ -68,7 +68,7 @@ export default class ViewAllBlogs extends React.Component {
                     <Card.Img
                       style={{ height: "30vh", width: "13vw", objectFit: "fill" }}
                       variant="top"
-                      src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+                      src="https://ggsc.s3.amazonaws.com/images/made/images/uploads/Rainbow_gay_rights_flag_300_200_int_c1-1x.jpeg"
                     />
                     <hr />
                   </div>
