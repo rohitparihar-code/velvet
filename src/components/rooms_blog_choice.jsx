@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 export default function RoomsBlogChoice() {
     return (
         <div className="mt-5">
+            <div className="logout" Style="margin-left: 90vw">
+                <button className="btn btn-outline-danger">
+                    <Link to="/">Logout</Link>
+                </button>
+            </div>
             <div className="d-flex justify-content-center">
                 <div className="align-self-center img-container">
                     <Link to="/chat-room-names"><img className="my-img" src="images/join_rooms.JPG" Style="margin-left: 0" alt="" /></Link>

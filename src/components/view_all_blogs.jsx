@@ -23,7 +23,7 @@ export default class ViewAllBlogs extends React.Component {
               className="btn btn-outline-warning"
               data-bs-toggle="modal"
               data-bs-target="#writeArticleModal">
-              Start
+              Start Writing
             </button>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default class ViewAllBlogs extends React.Component {
                     type specimen book. It has
                   </Card.Text>
                   <button
-                    className="btn"
+                    className="btn btn-outline-dark"
                     data-bs-toggle="modal"
                     data-bs-target="#readArticleModal"
                   >
@@ -83,7 +83,7 @@ export default class ViewAllBlogs extends React.Component {
                     type specimen book. It has
                   </Card.Text>
                   <button
-                    className="btn"
+                    className="btn btn-outline-dark"
                     data-bs-toggle="modal"
                     data-bs-target="#readArticleModal"
                   >
@@ -118,7 +118,7 @@ export default class ViewAllBlogs extends React.Component {
                     type specimen book. It has
                   </Card.Text>
                   <button
-                    className="btn"
+                    className="btn btn-outline-dark"
                     data-bs-toggle="modal"
                     data-bs-target="#readArticleModal"
                   >
@@ -256,7 +256,7 @@ export default class ViewAllBlogs extends React.Component {
                   Close
                 </button>
                 <button type="button" class="btn btn-primary">
-                  Understood
+                  Post
                 </button>
               </div>
             </div>

@@ -238,7 +238,7 @@ class ChatRoom extends React.Component {
   render() {
     const { redirect, chats, user_id, takeBack, members } = this.state;
     if (redirect || takeBack)
-      return <Redirect to="/" />;
+      return <Redirect to="/chat-room-names" />;
     else
       return (<><div>
         <h1 className="container-fluid" Style="text-align: center; color: white">Room name - Fiesta </h1>
