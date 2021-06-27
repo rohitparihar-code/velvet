@@ -1,5 +1,6 @@
 .view-blogs-landing-div {
-    height: 75vh;
+    margin: 5vh 0vh 0vh 0vh;
+    height: 50vh;
     width: 100%;
     background-color: teal;
     /* background: linear-gradient(to top left, violet 20%, blue 40%, green 60%, yellow 80%, red 100%); */
@@ -8,3 +9,27 @@
 .blog-content {
     color: black;
 }
+
+
+
+/* Choice Page CSS */
+.img-container {
+    height: 82vh;
+    width: 42vw;
+    position: relative;
+    margin-top: 1vh;
+}
+
+.my-img {
+    height: 80vh;
+    width: 40vw;
+    object-fit: fill;
+    margin: 1.5vh 2vh 0vh 2vh;
+}
+
+.my-img:hover {
+    height: 78vh;
+    width: 38vw;
+    align-self: center;
+}
+/* CHOICE page CSS End */

@@ -14,7 +14,7 @@ export default class ViewAllBlogs extends React.Component {
         <div className="container-fluid view-blogs-landing-div row">
           <div className="col-5 align-self-center my-box">
             <h3>
-              Read Stories From <br /> Inspiring People
+              <a href="#blogs">Read Stories From <br /> Inspiring People </a>
             </h3>
           </div>
           <div className="col-5 align-self-center my-box">
@@ -27,10 +27,10 @@ export default class ViewAllBlogs extends React.Component {
             </button>
           </div>
         </div>
-        <div className="d-flex justify-content-center" Style="margin: 5vh">
+        <div className="d-flex justify-content-center" Style="margin: 5vh; color: white">
           <h2>Read Stories from Peoples who have overcome fear of hiding</h2>
         </div>
-        <div className="blog-content m-5">
+        <div id="blogs" className="blog-content m-5">
           <Card style={{ width: "60vw", height: "37vh" }}>
             <Card.Body>
               <div className="row justify-content-between">
@@ -60,9 +60,11 @@ export default class ViewAllBlogs extends React.Component {
                     variant="top"
                     src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
                   />
+                  <hr />
                 </div>
               </div>
             </Card.Body>
+            <hr />
           </Card>
         </div>
 

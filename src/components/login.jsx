@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery, gql, useMutation } from "@apollo/client";
+import { Redirect } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 
@@ -17,7 +18,8 @@ export default function Login() {
       }
     `;
     const [login, { data, error }] = useMutation(MUTATION);
-
+    const [redirect, setRedirect] = useState(false);
+    if(!redirect)
     return (
         <div className="row d-flex justify-content-center pt-2" Style="background-color: rgb(32, 0, 69)">
             <div className="col-4 welcome-text-container d-flex justify-content-center">
@@ -35,6 +37,7 @@ export default function Login() {
                                 password: password
                             }
                         });
+                        setRedirect(true);
                         console.log(data);
                         console.log(error);
                     }}>
@@ -57,4 +60,5 @@ export default function Login() {
             </div>
         </div>
     );
+    else return <Redirect to='/rooms-blog-choice'></Redirect>
 };

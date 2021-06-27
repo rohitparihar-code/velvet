@@ -118,7 +118,6 @@ class Questionnaire extends React.Component {
             // TODO: Move to selection page
             document.getElementById("nxtQ").style.display = 'none';
             document.getElementById("final-btn1").style.display = 'block';
-            document.getElementById("final-btn2").style.display = 'block';
             return ;
         }
 
@@ -172,11 +171,9 @@ class Questionnaire extends React.Component {
             <button Style="display: none" id="nxtQ" className="btn btn-info" onClick={this.nextQuest}>Next Question</button>
             <div className="row">
                 <button Style="display: none" id="final-btn1" className="btn btn-info col-4">
-                   <Link to="/chat-room-names">Chat with People of Your Interests</Link>
+                   <Link to="/rooms-blog-choice">Next</Link>
                 </button>
-                <button Style="display: none" id="final-btn2" className="btn btn-info col-4">
-                   <Link to="/view-all-blogs">Read Stories from Inspiring people</Link>
-                </button>
+                
             </div>
         </div>
     </div>

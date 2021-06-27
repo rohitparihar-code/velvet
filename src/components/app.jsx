@@ -13,6 +13,7 @@ import ChatRoomNames from "./chatRoomNames";
 import ChatRoom from "./chat_room";
 import ViewAllBlogs from "./view_all_blogs";
 import mainPage from "./main";
+import RoomsBlogChoice from "./rooms_blog_choice";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/chat-room" render={(props) => <ChatRoom {...props} />}></Route>
           <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
           <Route path="/login" component={Login}></Route>
+          <Route path="/rooms-blog-choice" component={RoomsBlogChoice}></Route>
           <Route path="/" component={mainPage}></Route>
         </Switch>
       </div>
