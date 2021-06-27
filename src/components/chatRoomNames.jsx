@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import { gql, useMutation, useQuery } from "@apollo/client";
 import { db } from "../config/firebase";
 import axios from "axios";
 
@@ -27,14 +26,6 @@ async function GetUserId() {
   console.log(res.data);
   
   return res.data;
-}
-async function Logout() {
-    const MUTATION = gql`
-    mutation Logout {
-      logout
-    }
-  `;
-  const [logout, { data1, error1 }] = useMutation(MUTATION);
 }
 const defaultDesc =
   "Welcome to our Velvet fiesta. Connect with people and share your interests by joining the chat room of your choice";
