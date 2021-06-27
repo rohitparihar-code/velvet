@@ -2,8 +2,6 @@
 
 MLH PrideHacks 2021
 
-## Website Link
-https://velvet-fiesta.herokuapp.com/
 
 ## Inspiration
 
@@ -43,10 +41,19 @@ Improve the user experience in the chat room.
 Improve the overall UI/UX
 Add more features like video calls with peers.
 
+# Team Members
+1. Aditya R Rudra
+2. Rajat Partani
+3. Rohit Parihar
+4. Satvik Singh
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `npm start`
 
