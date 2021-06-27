@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import {db} from '../config/firebase';
 import axios from 'axios';
+import BASE_URL from '../config/constants';
 
 var room_description = [
     'Interact with allies from all around the world',
@@ -22,7 +23,7 @@ var room_names = [
 ];
 
 async function getUserId() {
-    let res = await axios.get('http://localhost:8080/user');
+    let res = await axios.get(BASE_URL + 'user');
     console.log(res.data);
     return res.data;
   }

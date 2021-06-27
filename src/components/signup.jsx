@@ -54,16 +54,18 @@ export default function SignUp() {
                             }
                         });
                         console.log(data);
-                        if(data && data.register.uid) {
-                            setRedirect(true);
+                        if(data) {
+                            if(data.register.uid === '') {
+                                setEmail('');
+                                setPassword('');
+                                setUserName('');
+                                setName('');
+                                setError(true);
+                            } else {
+                                setRedirect(true);
+                            }
                         }
-                        else {
-                            setEmail('');
-                            setPassword('');
-                            setUserName('');
-                            setName('');
-                            setError(true);
-                        }
+                        
                     }}>
                         <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Email address</label>

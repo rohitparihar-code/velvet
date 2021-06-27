@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 import App from './components/app';
+import BASE_URL from './config/constants';
 
 const client = new ApolloClient({
-  //uri: "https://velvet-gql.as.r.appspot.com/",
-  uri: 'http://localhost:8080',
+  uri: BASE_URL,
   cache: new InMemoryCache()
 });
 

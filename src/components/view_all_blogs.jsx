@@ -2,6 +2,7 @@ import { gql, useMutation, useQuery } from "@apollo/client";
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 
+import BASE_URL from "../config/constants";
 import { useHistory } from 'react-router-dom';
 import { Card } from "react-bootstrap";
 import { getDefaultValues } from "@apollo/client/utilities";
@@ -20,7 +21,7 @@ export default function ViewAllBlogs() {
   let history = useHistory();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/getAllBlogs').then((res)=>{
+    axios.get(BASE_URL +  'getAllBlogs').then((res)=>{
       console.log(res.data);
        setBlogs(res.data);
     })
