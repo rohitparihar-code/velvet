@@ -6,16 +6,16 @@ import axios from 'axios';
 var room_description = [
     'Interact with allies from all around the world',
     'Safe space for Queer individuals',
-    'Don\'t enter if you are not an 18+',
-    'To discuss LGBTQ+ causes around the world',
-    'Join this room if you are facing any issues',
-    'Discuss your Hobbies'
+    'Not Safe For Work (For 18+ only). To gain knowledge from community',
+    'To discuss LGBTQ+ causes around the world and be a part of protests or movements',
+    'Want some help? Get support/guidance from our friends around the world ',
+    'Nurture your interests'
 ]
 
 var room_names = [
     'Global',
     'Queer',
-    'NFSW',
+    'NSFW',
     'Politics',
     'Help/Suggesstions',
     'Arts'
@@ -96,6 +96,11 @@ class ChatRoomNames extends React.Component {
         else
           return (
             <div className=" container-fluid">
+                <div className="logout" Style="margin-left: 90vw; margin-top : 5vh;">
+                    <button className="btn custom-button">
+                        <Link className="link-text" to="/">Logout</Link>
+                    </button>
+                </div>
                 <div className="row pt-5">
                     <div className="d-flex flex-column col-5 my-box chatRoom-names justify-content-around">
                         {
@@ -103,7 +108,7 @@ class ChatRoomNames extends React.Component {
                             (name, i) => (<div><button className="btn my-btn" id="submit" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={(e, i) => this.onClick(e, i)} value={i}>{room_names[i]}</button> </div>))}
                     </div>
                     <div className="d-flex col-5 chatRoom-desc my-box justify-content-center" id = 'description'>
-                        <p className="my-desc rainbow-text align-self-center">{this.desc}</p>
+                        <p className="my-desc rainbow-text align-self-center" Style="font-size: 30px">{this.desc}</p>
                     </div>
                 </div>
             </div>

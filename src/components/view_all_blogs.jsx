@@ -7,6 +7,7 @@ import { Card } from "react-bootstrap";
 import { getDefaultValues } from "@apollo/client/utilities";
 
 
+
 export default function ViewAllBlogs() {
 
   const [title, setTitle] = useState('');
@@ -214,11 +215,13 @@ mutation Insert($title: String, $content: String, $description: String, $imageUr
               >
                 Close
               </button>
+
             </div>
               </form>
             </div>
             
           </div>
+          {/* Write Article Modal */}
         </div>
       </div>
       {/* Write Article Modal */}

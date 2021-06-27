@@ -250,8 +250,8 @@ class ChatRoom extends React.Component {
       return <Redirect to="/chat-room-names" />;
     else
       return (<><div>
-        <h1 className="container-fluid" Style="text-align: center; color: white">Room name - Fiesta </h1>
-        <Button onClick={(e) => this.onLeaveRoom(e)}>Leave Room</Button>
+        <h1 className="container-fluid" Style="text-align: center; color: #37d1d1">Room name - Fiesta </h1>
+        <Button className="custom-button" onClick={(e) => this.onLeaveRoom(e)}>Leave Room</Button>
         {/*<CopiedContent />*/}
         <div className="container">
           <div className="content container-fluid bootstrap snippets bootdey">

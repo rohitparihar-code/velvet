@@ -85,7 +85,7 @@ export default function SignUp() {
                             <input type="password" className="form-control" id="password" name={password} onChange={(e) => setPassword(e.target.value)}></input>
                         </div>
                         <br />
-                        <button type="submit" className="btn btn-primary" Style="background-color: teal;">SignUp</button>
+                        <button type="submit" className="btn custom-button"> SignUp </button>
                     </form>
                 </div>
             </div>

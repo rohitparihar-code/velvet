@@ -144,11 +144,8 @@ class Questionnaire extends React.Component {
     render() {
         return (
         <div className="row d-flex justify-content-around mt-5 pt-5" Style="color: white">
-            {/* <div className="col-1 align-self-center my-box">
-                <h1>Q{this.index+1}.</h1>
-            </div> */}
         <div className="col-6 align-self-center align-items-center my-box">
-            <h1>{questions[this.index]}</h1>
+            <h1 Style="color: #37d1d1">{questions[this.index]}</h1>
             <hr />
             <form onSubmit={this.handleSubmit} >
             <input id="opt1" className="options-text" type="radio" name="options" onClick={this.handleChange} value={options[this.index][0]}/>  
@@ -163,15 +160,15 @@ class Questionnaire extends React.Component {
             <input id="opt4" className="options-text" type="radio" name="options" onClick={this.handleChange} value={options[this.index][3]}/>
             <label for="opt4">  <h4>&nbsp;&nbsp;{options[this.index][3]}</h4></label><hr />
             
-            <input type="submit" value="Submit" className="btn btn-primary"/>
+            <input type="submit" value="Submit" className="btn custom-button"/>
             </form>
         </div>
         <div className="col-4 align-self-center my-box" Style="margin-right: 10vw">
-            <p className="rainbow-text">{this.review}</p>
-            <button Style="display: none" id="nxtQ" className="btn btn-info" onClick={this.nextQuest}>Next Question</button>
+            <p className="rainbow-text" Style="font-size: 30px">{this.review}</p>
+            <button Style="display: none" id="nxtQ" className="btn custom-button" onClick={this.nextQuest}>Next Question</button>
             <div className="row">
-                <button Style="display: none" id="final-btn1" className="btn btn-info col-4">
-                   <Link to="/rooms-blog-choice">Next</Link>
+                <button Style="display: none" id="final-btn1" className="btn custom-button col-4">
+                   <Link className="link-text" to="/rooms-blog-choice">Next</Link>
                 </button>
                 
             </div>

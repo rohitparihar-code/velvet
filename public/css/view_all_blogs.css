@@ -1,7 +1,14 @@
+.my-card {
+    background-color: #200045;
+    border-color: #e736a5;
+    border-width: 2px;
+    color: #fff;
+    border-radius: 0.5vw;
+}
+
 .my-body {
     min-height: 100%;
     min-width: 100%;
-    background: linear-gradient(rgb(105, 194, 206) 50%, rgb(63, 102, 139) 100%)
 }
 
 .view-blogs-landing-div {
@@ -9,7 +16,7 @@
     height: 50vh;
     width: 100%;
     /* background-color: rgb(185, 58, 154); */
-    background: linear-gradient(to bottom left, rgb(120, 105, 206) 50%, rgb(63, 102, 139) 100%);
+    background: linear-gradient(to bottom left, rgb(60, 52, 104) 50%, rgb(49, 77, 104) 100%);
 }
 
 .blog-content {
@@ -24,7 +31,7 @@
 }
 
 .my-link:hover {
-    color: rgb(0, 0, 0);
+    color: #37d1d1;
 }
 
 /* Choice Page CSS */
@@ -48,3 +55,35 @@
     align-self: center;
 }
 /* CHOICE page CSS End */
+
+/* Custome Styles */
+
+.rainbow-text {
+    color: transparent;
+    text-shadow: 0 0 0.2vw #fff;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom-button {
+      border-color: #e736a5;
+      border-radius: 2vw;
+      border-width: 2px;
+      background-color: transparent;
+      color: #e736a5;
+}
+
+.custom-button:hover {
+    color: white;
+}
+
+.link-text {
+    text-decoration: none;
+    color: #e736a5;
+}
+
+.link-text:hover {
+    color: white;
+}
