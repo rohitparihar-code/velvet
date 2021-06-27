@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import {db} from '../config/firebase';
+import axios from 'axios';
 
 var room_description = [
     'Interact with allies from all around the world',
@@ -18,6 +21,11 @@ var room_names = [
     'Arts'
 ];
 
+async function getUserId() {
+    let res = await axios.get('http://localhost:8080/user');
+    console.log(res.data);
+    return res.data;
+  }
 const defaultDesc = 'Welcome to our Velvet fiesta. Connect with people and share your interests by joining the chat room of your choice';
 
 class ChatRoomNames extends React.Component {
@@ -28,10 +36,26 @@ class ChatRoomNames extends React.Component {
         this.desc = defaultDesc;
         this.index = 0;
         this.showDesc = false;
-
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            memberId: '',
+            join: false,
+            room: '',
+            user_id: '',
+            redirect: false
+        }
+        this.onClick = this.onClick.bind(this);
         this.onMouseEnter = this.onMouseEnter.bind(this);
         this.onMouseLeave = this.onMouseLeave.bind(this);
+    }
+
+
+    componentDidMount(props) {
+        getUserId().then((user) => {
+            if(user.id)
+            this.setState({ user_id: user.id });
+            else
+            this.setState({redirect: true});
+        });
     }
 
     onMouseEnter(event) {
@@ -42,19 +66,34 @@ class ChatRoomNames extends React.Component {
         this.setState(() => this.desc = defaultDesc);
     }
 
-    handleSubmit(event) {
-
-        this.setState();
+    async onClick(event, i) {
+        let room_id = `members/${room_names[event.target.value]}`;
+        let memberRef = db.ref(room_id).push();
+        await memberRef.set({
+            uid: this.state.user_id
+        });
+        this.setState({room: room_names[event.target.value]});
+        this.setState({memberId: memberRef.key});
+        this.setState({join: true});
     }
 
     render() {
-        return (
+        if(this.state.join)
+         return <Redirect to = {{
+             pathname: '/chat-room',
+             state: {
+                 memberId: this.state.memberId,
+                 room: this.state.room
+             }
+         }}></Redirect>
+        else
+          return (
             <div className=" container-fluid">
                 <div className="row pt-5">
                     <div className="d-flex flex-column col-5 my-box chatRoom-names justify-content-around">
                         {
                         room_names.map(
-                            (name, i) => (<div><button className="btn my-btn" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={this.handleSubmit} value={i}>{room_names[i]}</button> </div>))}
+                            (name, i) => (<div><button className="btn my-btn" id="submit" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={(e, i) => this.onClick(e, i)} value={i}>{room_names[i]}</button> </div>))}
                     </div>
                     <div className="d-flex col-5 chatRoom-desc my-box justify-content-center" id = 'description'>
                         <p className="my-desc rainbow-text align-self-center">{this.desc}</p>
@@ -62,6 +101,7 @@ class ChatRoomNames extends React.Component {
                 </div>
             </div>
         );
+
     }
 }
 

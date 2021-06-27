@@ -289,3 +289,7 @@ body{
     -webkit-appearance: none;
     border-radius: 0;
 }
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
