@@ -3,6 +3,44 @@
 MLH PrideHacks 2021
 
 
+## Inspiration
+
+As the COVID19 pandemic goes on, we have built an inclusive platform that aims to create a safe space for trans and non-binary people and helps you connect with folks all around the world and build a community, on the occasion of Pride Month!
+
+## What it does
+
+**Features**-
+1. A powerful and secure login functionality
+2. An educational questionnaire to spread awareness and keeping it as a safe-space
+3. A chatroom for you to connect with people around the world 
+4. An article page for you to share your powerful stories and get inspired from other's stories
+
+## How we built it
+
+1. Designed a beautiful prototype and UI using **Canva** and **Nicepage**
+2. Used **React.js** and **React-bootstrap** to create a functional frontend
+3. Made a powerful backend using **Node.js**, **Express.js** and **GraphQL**
+4. Used GCP's **Firebase** for Authentication and Database
+5. Use **Apollo Server** subscriptions for Chatrooms and **Realtime Database** to store
+6. Used GCP's **Firestore** as a database for our articles 
+7. Deployed our frontend on **Heroku**, Deployed our backend on **Google Cloud Platform**
+
+## Challenges we ran into
+Deploying on a particular domain.
+
+## Accomplishments that we're proud of
+1. We got to learn about GraphQL
+2. We made a live chat app
+3. Able to work as a team and complete this project
+
+## What we learned
+GraphQL and React.
+
+## What's next for Velvet Cafe&Bar
+Improve the user experience in the chat room.
+Improve the overall UI/UX
+Add more features like video calls with peers.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -18,58 +56,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
