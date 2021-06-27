@@ -22,3 +22,9 @@ h1 {
 .btn-info {
     margin: 1vh;
 }
+
+.logout {
+    text-decoration: none;
+    color: white;
+}
+

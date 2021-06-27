@@ -89,7 +89,7 @@ class ChatRoomNames extends React.Component {
         else
           return (
             <div className=" container-fluid">
-                <div className="logout" Style="margin-left: 90vw">
+                <div className="logout" Style="margin-left: 90vw; margin-top : 5vh;">
                     <button className="btn btn-outline-danger">
                         <Link to="/">Logout</Link>
                     </button>
