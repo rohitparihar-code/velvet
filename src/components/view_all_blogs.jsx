@@ -27,7 +27,8 @@ export default class ViewAllBlogs extends React.Component {
             </button>
           </div>
         </div>
-        <div className="d-flex justify-content-center" Style="margin: 5vh; color: white">
+        <div className="container-fluid" Style="height: 5vh; background-color: rgb(32, 0, 69)"></div>
+        <div className="d-flex justify-content-center" Style="margin-top: 5vh; color: white">
           <h2>Read Stories from Peoples who have overcome fear of hiding</h2>
         </div>
         <div id="blogs" className="blog-content m-5">
