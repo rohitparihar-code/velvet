@@ -113,7 +113,7 @@ export default function mainPage() {
   </section>
   <section class="u-clearfix u-custom-color-14 u-section-2" id="sec-c70c">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h1 class="u-text u-text-custom-color-9 u-text-1">What is this app all about?</h1>
+      <h1 class="u-text u-text-custom-color-9 u-text-1 rainbow-text">What is this app all about?</h1>
       <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
         <div class="u-layout" >
           <div class="u-layout-row" >
@@ -275,7 +275,7 @@ export default function mainPage() {
   </section>
   <section class="u-clearfix u-custom-color-14 u-section-4" id="sec-8d26">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <h2 class="u-text u-text-grey-5 u-text-1">What's next​ for this app?</h2>
+      <h2 class="u-text u-text-grey-5 u-text-1 rainbow-text">What's next​ for this app?</h2>
       <p class="u-text u-text-custom-color-9 u-text-2">We have a lot of plans to build upon this app in future.&nbsp;Our
         goals include: <br />
       </p>

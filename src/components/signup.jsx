@@ -26,7 +26,7 @@ export default function SignUp() {
             </div>
             <div className="col-4 input-text-container d-flex justify-content-center">
                 <div className="align-self-center d-flex flex-column justify-content-evenly">
-                    <h3 className="glow-text" Style="color: teal;">Register Account</h3>
+                    <h3 className="glow-text" Style="color: #37d1d1;">Register Account</h3>
                     <form onSubmit={(e) => {
                         e.preventDefault();
                         register({
@@ -53,7 +53,7 @@ export default function SignUp() {
                             <input type="password" className="form-control" id="password" onChange={(e) => setPassword(e.target.value)}></input>
                         </div>
                         <br />
-                        <button type="submit" className="btn btn-primary" Style="background-color: teal;">SignUp</button>
+                        <button type="submit" className="btn custom-button"> SignUp </button>
                     </form>
                 </div>
             </div>

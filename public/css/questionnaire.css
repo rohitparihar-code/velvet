@@ -11,14 +11,6 @@ h1 {
     padding-left: 10vw;
 }
 
-.rainbow-text {
-    background-image: linear-gradient(to left, violet, yellow);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 30px;
-}
-
 .btn-info {
     margin: 1vh;
 }

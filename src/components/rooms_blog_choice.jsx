@@ -5,8 +5,8 @@ export default function RoomsBlogChoice() {
     return (
         <div className="mt-5">
             <div className="logout" Style="margin-left: 90vw">
-                <button className="btn btn-outline-danger">
-                    <Link to="/">Logout</Link>
+                <button className="btn custom-button">
+                    <Link className="link-text" to="/">Logout</Link>
                 </button>
             </div>
             <div className="d-flex justify-content-center">

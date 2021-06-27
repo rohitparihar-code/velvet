@@ -109,7 +109,3 @@
     color: teal;
     font-weight: 500;
 }
-
-.glow-text {
-    text-shadow: 0 0 0.1vw #fff, 0 0 0.2vw #fff, 0 0 0.3vw #fff;
-}

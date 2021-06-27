@@ -13,8 +13,8 @@ export default class ViewAllBlogs extends React.Component {
     return (
       <div>
         <div className="logout" Style="margin-left: 90vw; margin-top : 5vh">
-          <button className="btn btn-outline-danger">
-            <Link to="/">Logout</Link>
+          <button className="btn custom-button">
+            <Link className="link-text" to="/">Logout</Link>
           </button>
         </div>
         <div className="my-body">
@@ -27,9 +27,9 @@ export default class ViewAllBlogs extends React.Component {
               </h3>
             </div>
             <div className="col-5 align-self-center my-box">
-              <h3 className="align-self-center" Style="padding-top: 14vh"> Write Your Own Story </h3>
+              <h3 className="align-self-center" Style="padding-top: 14vh; color: #37d1d1"> Write Your Own Story </h3>
               <button
-                className="btn btn-outline-warning"
+                className="btn custom-button"
                 data-bs-toggle="modal"
                 data-bs-target="#writeArticleModal">
                 Start Writing
@@ -37,16 +37,16 @@ export default class ViewAllBlogs extends React.Component {
             </div>
           </div>
           <div className="container-fluid" Style="height: 5vh; background-color: rgb(32, 0, 69)"></div>
-          <div className="d-flex justify-content-center" Style="margin-top: 5vh; color: white">
-            <h2>Read Stories from Peoples who have overcome fear of hiding</h2>
+          <div className="d-flex justify-content-center" Style="margin-top: 5vh; color: #37d1d1">
+            <h2 className="rainbow-text">Read Stories from Our Community</h2>
           </div>
           <div id="blogs" className="blog-content m-5">
-            <Card style={{ width: "60vw", height: "37vh", margin: "50px" }}>
+            <Card className="my-card" style={{ width: "60vw", height: "40vh", margin: "50px" }}>
               <Card.Body>
                 <div className="row justify-content-between">
                   <div className="col-9">
                     <Card.Text>Author</Card.Text>
-                    <Card.Title style={{ height: "4vh", overflow: "hidden" }}>
+                    <Card.Title style={{ height: "4vh", overflow: "hidden", color: "#37d1d1"}}>
                       Some very large Blog title
                   </Card.Title>
                     <Card.Text style={{ height: "10vh", overflow: "hidden" }}>
@@ -57,7 +57,7 @@ export default class ViewAllBlogs extends React.Component {
                       type specimen book. It has
                   </Card.Text>
                     <button
-                      className="btn btn-outline-dark"
+                      className="btn custom-button "
                       data-bs-toggle="modal"
                       data-bs-target="#readArticleModal"
                     >
@@ -76,12 +76,12 @@ export default class ViewAllBlogs extends React.Component {
               </Card.Body>
               <hr />
             </Card>
-            <Card style={{ width: "60vw", height: "37vh", margin: "50px" }}>
+            <Card className="my-card" style={{ width: "60vw", height: "40vh", margin: "50px" }}>
               <Card.Body>
                 <div className="row justify-content-between">
                   <div className="col-9">
                     <Card.Text>Author</Card.Text>
-                    <Card.Title style={{ height: "4vh", overflow: "hidden" }}>
+                    <Card.Title style={{ height: "4vh", overflow: "hidden", color: "#37d1d1"}}>
                       Some very large Blog title
                   </Card.Title>
                     <Card.Text style={{ height: "10vh", overflow: "hidden" }}>
@@ -92,7 +92,7 @@ export default class ViewAllBlogs extends React.Component {
                       type specimen book. It has
                   </Card.Text>
                     <button
-                      className="btn btn-outline-dark"
+                      className="btn custom-button "
                       data-bs-toggle="modal"
                       data-bs-target="#readArticleModal"
                     >
@@ -111,12 +111,12 @@ export default class ViewAllBlogs extends React.Component {
               </Card.Body>
               <hr />
             </Card>
-            <Card style={{ width: "60vw", height: "37vh", margin: "50px" }}>
+            <Card className="my-card" style={{ width: "60vw", height: "40vh", margin: "50px" }}>
               <Card.Body>
                 <div className="row justify-content-between">
                   <div className="col-9">
                     <Card.Text>Author</Card.Text>
-                    <Card.Title style={{ height: "4vh", overflow: "hidden" }}>
+                    <Card.Title style={{ height: "4vh", overflow: "hidden", color: "#37d1d1"}}>
                       Some very large Blog title
                   </Card.Title>
                     <Card.Text style={{ height: "10vh", overflow: "hidden" }}>
@@ -127,7 +127,7 @@ export default class ViewAllBlogs extends React.Component {
                       type specimen book. It has
                   </Card.Text>
                     <button
-                      className="btn btn-outline-dark"
+                      className="btn custom-button "
                       data-bs-toggle="modal"
                       data-bs-target="#readArticleModal"
                     >

@@ -90,8 +90,8 @@ class ChatRoomNames extends React.Component {
           return (
             <div className=" container-fluid">
                 <div className="logout" Style="margin-left: 90vw; margin-top : 5vh;">
-                    <button className="btn btn-outline-danger">
-                        <Link to="/">Logout</Link>
+                    <button className="btn custom-button">
+                        <Link className="link-text" to="/">Logout</Link>
                     </button>
                 </div>
                 <div className="row pt-5">
@@ -101,7 +101,7 @@ class ChatRoomNames extends React.Component {
                             (name, i) => (<div><button className="btn my-btn" id="submit" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onClick={(e, i) => this.onClick(e, i)} value={i}>{room_names[i]}</button> </div>))}
                     </div>
                     <div className="d-flex col-5 chatRoom-desc my-box justify-content-center" id = 'description'>
-                        <p className="my-desc rainbow-text align-self-center">{this.desc}</p>
+                        <p className="my-desc rainbow-text align-self-center" Style="font-size: 30px">{this.desc}</p>
                     </div>
                 </div>
             </div>

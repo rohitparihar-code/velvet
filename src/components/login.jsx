@@ -28,7 +28,7 @@ export default function Login() {
             </div>
             <div className="col-4 input-text-container d-flex justify-content-center">
                 <div className="align-self-center d-flex flex-column justify-content-evenly">
-                    <h3 className="glow-text" Style="color: teal;">Account Login</h3>
+                    <h3 className="glow-text" Style="color: #37d1d1;">Account Login</h3>
                     <form onSubmit={(e) => {
                         e.preventDefault();
                         login({
@@ -54,7 +54,7 @@ export default function Login() {
                             Don't Have an account. <Link to="/signup">SignUp</Link>
                         </div>
                         <br />
-                        <button type="submit" className="btn btn-primary" Style="background-color: teal;">Submit</button>
+                        <button type="submit" className="btn custom-button">Submit</button>
                     </form>
                 </div>
             </div>
