@@ -89,6 +89,11 @@ class ChatRoomNames extends React.Component {
         else
           return (
             <div className=" container-fluid">
+                <div className="logout" Style="margin-left: 90vw">
+                    <button className="btn btn-outline-danger">
+                        <Link to="/">Logout</Link>
+                    </button>
+                </div>
                 <div className="row pt-5">
                     <div className="d-flex flex-column col-5 my-box chatRoom-names justify-content-around">
                         {
