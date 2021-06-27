@@ -1,7 +1,10 @@
-import React from "react";
-import { Link, Redirect } from "react-router-dom";
-import { db } from "../config/firebase";
-import axios from "axios";
+import React from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import {db} from '../config/firebase';
+import axios from 'axios';
+import BASE_URL from '../config/constants';
+
+
 
 var room_description = [
   "Interact with allies from all around the world",
@@ -21,14 +24,12 @@ var room_names = [
   "Arts",
 ];
 
-async function GetUserId() {
-  let res = await axios.get("http://localhost:8080/user");
-  console.log(res.data);
-  
-  return res.data;
-}
-const defaultDesc =
-  "Welcome to our Velvet fiesta. Connect with people and share your interests by joining the chat room of your choice";
+async function getUserId() {
+    let res = await axios.get(BASE_URL + 'user');
+    console.log(res.data);
+    return res.data;
+  }
+const defaultDesc = 'Welcome to our Velvet fiesta. Connect with people and share your interests by joining the chat room of your choice';
 
 class ChatRoomNames extends React.Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class ChatRoomNames extends React.Component {
   }
 
   componentDidMount(props) {
-    GetUserId().then((user) => {
+    getUserId().then((user) => {
       if (user.uid) {
         this.setState({ user_id: user.uid });
         this.setState({ username: user.username });

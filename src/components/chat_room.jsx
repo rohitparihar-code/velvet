@@ -8,6 +8,7 @@ import { useQuery, gql } from '@apollo/client';
 import axios from 'axios';
 import Login from "./login";
 import timeConverter from '../utility/date';
+import BASE_URL from '../config/constants';
 
 const query = gql`
    {
@@ -16,7 +17,7 @@ const query = gql`
 `;
 
 async function getUserId() {
-  let res = await axios.get('http://localhost:8080/user');
+  let res = await axios.get(BASE_URL + 'user');
   console.log(res.data);
   return res.data;
 }

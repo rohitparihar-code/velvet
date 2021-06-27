@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import BASE_URL from '../config/constants';
 
 import SignUp from './signup';
 
@@ -14,9 +15,9 @@ export default function Login() {
     const [errorLogin, setError] = useState(false);
  
     useEffect(() => {
-        axios.get('http://localhost:8080/user').then((res) => {
+        axios.get(BASE_URL + 'user').then((res) => {
             let user = res.data;
-            if (user.uid)
+            if (user.uid !== null)
                 setRedirect(true);
             else
                 setRedirect(false);
@@ -66,12 +67,14 @@ export default function Login() {
                             // if(data.login.uid)
                             // setRedirect(true);
                             console.log(data);
-                            if (data && data.login.uid)
-                                setRedirect(true);
-                            else{
-                                setEmail('');
-                                setPassword('');
-                                setError(true);
+                            if(data) {
+                                if(data.login.uid !== '')
+                                  setRedirect(true);
+                                else{
+                                    setEmail('');
+                                    setPassword('');
+                                    setError(true);    
+                                }
                             }
                             console.log(error);
                         }}>
