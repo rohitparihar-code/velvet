@@ -140,7 +140,7 @@ export default function ViewAllBlogs() {
                               objectFit: "fill",
                             }}
                             variant="top"
-                            src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+                            src={blog.imageUrl}
                           />
                           <hr />
                         </div>
@@ -172,7 +172,7 @@ export default function ViewAllBlogs() {
                         <div className="modal-body">
                           <img
                             Style="height: 30vh; width: 30vw; object-fit: fill"
-                            src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
+                            src={blogs[index].imageUrl}
                             alt="..."
                           />
                           <hr />
