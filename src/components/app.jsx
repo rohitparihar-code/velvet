@@ -20,24 +20,24 @@ function App() {
       <div>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-// <<<<<<< aditya/chat
-//                 <Switch>
-//                     <Route path="/signup" component={SignUp}></Route>
-//                     <Route path="/quest" component={Quest}></Route>
-//                     <Route path="/chat-room-names" component={ChatRoomNames}></Route>
-//                     <Route path="/chat-room" render={(props) => <ChatRoom {...props}/>}></Route>
-//                     <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
-//                     <Route path="/" component={Login}></Route>
-//                 </Switch>
-//             </div>
-//         </Router>
-//     );
-// =======
-        <Switch>
+
+        {/* <Switch>
           <Route path="/signup" component={SignUp}></Route>
           <Route path="/quest" component={Quest}></Route>
           <Route path="/chat-room-names" component={ChatRoomNames}></Route>
-          <Route path="/chat-room" component={ChatRoom}></Route>
+          <Route path="/chat-room" render={(props) => <ChatRoom {...props} />}></Route>
+          <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
+          <Route path="/" component={Login}></Route>
+        </Switch>
+      </div>
+    </Router>
+  ); */}
+
+  <Switch>
+          <Route path="/signup" component={SignUp}></Route>
+          <Route path="/quest" component={Quest}></Route>
+          <Route path="/chat-room-names" component={ChatRoomNames}></Route>
+          <Route path="/chat-room" render={(props) => <ChatRoom {...props} />}></Route>
           <Route path="/view-all-blogs" component={ViewAllBlogs}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/" component={mainPage}></Route>
@@ -45,7 +45,6 @@ function App() {
       </div>
     </Router>
   );
-// >>>>>>> main
 }
 
 export default App;

@@ -144,7 +144,7 @@ class Questionnaire extends React.Component {
 
     render() {
         return (
-        <div className="row d-flex justify-content-around mt-5 pt-5">
+        <div className="row d-flex justify-content-around mt-5 pt-5" Style="color: white">
             {/* <div className="col-1 align-self-center my-box">
                 <h1>Q{this.index+1}.</h1>
             </div> */}

@@ -241,15 +241,15 @@ class ChatRoom extends React.Component {
       return <Redirect to="/" />;
     else
       return (<><div>
-        <h1 className="container-fluid" Style="text-align: center; color: black">Room name - Fiesta </h1>
+        <h1 className="container-fluid" Style="text-align: center; color: white">Room name - Fiesta </h1>
         <Button onClick={(e) => this.onLeaveRoom(e)}>Leave Room</Button>
         {/*<CopiedContent />*/}
-        <div class="container">
-          <div class="content container-fluid bootstrap snippets bootdey">
-            <div class="row row-broken">
-              <div class="col-sm-3 col-xs-12">
+        <div className="container">
+          <div className="content container-fluid bootstrap snippets bootdey">
+            <div className="row row-broken">
+              <div className="col-sm-3 col-xs-12">
                 <div
-                  class="col-inside-lg decor-default chat"
+                  className="col-inside-lg decor-default chat"
                   Style="overflow: hidden; outline: none;"
                   tabindex="5000"
                 >
@@ -262,16 +262,16 @@ class ChatRoom extends React.Component {
                           {Array.isArray(members) && members.map((member) => {
                             return (
                               <tr>
-                                <div class="user">
-                                  <div class="avatar">
+                                <div className="user">
+                                  <div className="avatar">
                                     <img
                                       src="https://bootdey.com/img/Content/avatar/avatar4.png"
                                       alt="User name"
                                     />
-                                    <div class="status busy"></div>
+                                    <div className="status busy"></div>
                                   </div>
-                                  <div class="name">{member.uid}</div>
-                                  <div class="mood">User mood</div>
+                                  <div className="name">{member.uid}</div>
+                                  <div className="mood">User mood</div>
                                 </div>
                               </tr>
                             )
@@ -310,31 +310,31 @@ class ChatRoom extends React.Component {
                 </div>
               </div>
               <div
-                class="col-sm-9 col-xs-12 chat"
+                className="col-sm-9 col-xs-12 chat"
                 Style="overflow: hidden; outline: none;"
                 tabindex="5001"
               >
-                <div class="col-inside-lg decor-default">
-                  <div class="chat-body">
+                <div className="col-inside-lg decor-default">
+                  <div className="chat-body">
                     <h6>Mini Chat</h6>
                     <TableScrollBar rows={9.5}>
                       <Table responsive >
                         <tbody>
                           {Array.isArray(chats) && chats.map((chat) => {
                             return (<tr>
-                              <div class={chat.uid === user_id ? 'answer right' : 'answer left'}>
-                                <div class="avatar">
+                              <div className={chat.uid === user_id ? 'answer right' : 'answer left'}>
+                                <div className="avatar">
                                   <img
                                     src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                     alt="User name"
                                   />
-                                  <div class="status offline"></div>
+                                  <div className="status offline"></div>
                                 </div>
-                                <div class="name">Alexander Herthic</div>
-                                <div class="text">
+                                <div className="name">Alexander Herthic</div>
+                                <div className="text">
                                   {chat.content}
                                 </div>
-                                <div class="time">{chat.timestamp}</div>
+                                <div className="time">{chat.timestamp}</div>
                               </div>
                             </tr>
                             )
