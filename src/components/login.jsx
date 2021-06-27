@@ -45,7 +45,7 @@ export default function Login() {
                         <Modal.Title><h3 style={{ color: 'red' }}><strong>Authentication Failed!</strong></h3></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>There was a problem logging you in.</p>
+                        <p>There was a problem logging you in. Please Try Again.</p>
                         <hr style={{ visibility: 'hidden' }} />
                         <hr style={{ visibility: 'hidden' }} />
                         <Button variant="success" onClick={(e) => setError(false)}>
@@ -91,7 +91,7 @@ export default function Login() {
                                 Don't Have an account. <Link to="/signup">SignUp</Link>
                             </div>
                             <br />
-                            <button type="submit" className="btn btn-primary" Style="background-color: teal;">Submit</button>
+                            <button type="submit" className="btn custom-button">Submit</button>
                         </form>
                     </div>
                 </div>

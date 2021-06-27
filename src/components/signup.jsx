@@ -28,7 +28,7 @@ export default function SignUp() {
                         <Modal.Title><h3 style={{ color: 'red' }}><strong>Authentication Failed!</strong></h3></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p>There was a problem registering you...</p>
+                        <p>There was a problem registering you... Please Try Again.</p>
                         <hr style={{ visibility: 'hidden' }} />
                         <hr style={{ visibility: 'hidden' }} />
                         <Button variant="success" onClick={(e) => setError(false)}>
